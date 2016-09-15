@@ -26,7 +26,7 @@ digitalWrite(relay_3, LOW);
 pinMode(relay_4, OUTPUT);
 digitalWrite(relay_4, LOW);
 
-// connection au SSID
+// connexion au SSID
 Serial.println();
 Serial.println();
 Serial.print("Connecting to ");
@@ -41,11 +41,11 @@ Serial.print(".");
 Serial.println("");
 Serial.println("WiFi connected");
 
-// mise ne place du serveur 
+// mise en place du serveur 
 server.begin();
 Serial.println("Server started");
 
-// vous affiche au moniteur serie l'adress ip du module
+// vous affiche au moniteur serie l'adresse ip du module
 Serial.print("Use this URL to connect: ");
 Serial.print("http://");
 Serial.print(WiFi.localIP());
@@ -132,40 +132,40 @@ client.print("Allumé");
 client.print("Eteint");
 }
 client.println("<br><br>");
-client.println("Cliquez <a href=\"/relay1=ON\">ICI</a> pour allumer le relai 1 <br>");
-client.println("Cliquez <a href=\"/relay1=OFF\">ICI</a> pour eteindre le relai 1 <br>");
+client.println("Cliquez <a href=\"/relay1=ON\">ICI</a> pour allumer le relais 1 <br>");
+client.println("Cliquez <a href=\"/relay1=OFF\">ICI</a> pour éteindre le relais 1 <br>");
 client.println("<br><br>");
 
-client.println("le relai 2 est: ");
+client.println("le relais 2 est: ");
 if(value2 == HIGH) {
 client.print("Allumé");
 } else {
 client.print("Eteint");
 }client.println("<br><br>");
-client.println("Cliquez <a href=\"/relay2=ON\">ICI</a> pour allumer le relai 2 <br>");
-client.println("Cliquez <a href=\"/relay2=OFF\">ICI</a> pour eteindre le relai 2 <br>");
+client.println("Cliquez <a href=\"/relay2=ON\">ICI</a> pour allumer le relais 2 <br>");
+client.println("Cliquez <a href=\"/relay2=OFF\">ICI</a> pour eteindre le relais 2 <br>");
 client.println("<br><br>");
 
-client.println("le relaie 3 est: ");
+client.println("le relais 3 est: ");
 if(value3 == HIGH) {
 client.print("Allumé");
 } else {
 client.print("Eteint");
 }
 client.println("<br><br>");
-client.println("Cliquez <a href=\"/relay3=ON\">ICI</a> pour allumer le relai 3 <br>");
-client.println("Cliquez <a href=\"/relay3=OFF\">ICI</a> pour eteindre le relai 3 <br>");
+client.println("Cliquez <a href=\"/relay3=ON\">ICI</a> pour allumer le relais 3 <br>");
+client.println("Cliquez <a href=\"/relay3=OFF\">ICI</a> pour eteindre le relais 3 <br>");
 client.println("<br><br>");
 
-client.println("le relaie 4 est: ");
+client.println("le relais 4 est: ");
 if(value4 == HIGH) {
 client.println("Allumé");
 } else {
 client.println("Eteint");
 }
 client.println("<br><br>");
-client.println("Cliquez <a href=\"/relay4=ON\">ICI</a> pour allumer le relaie 4 <br>");
-client.println("Cliquez <a href=\"/relay4=OFF\">ICI</a> pour eteindre le relaie 4 <br>");
+client.println("Cliquez <a href=\"/relay4=ON\">ICI</a> pour allumer le relais 4 <br>");
+client.println("Cliquez <a href=\"/relay4=OFF\">ICI</a> pour eteindre le relais 4 <br>");
 client.println("</html>");
 
 
